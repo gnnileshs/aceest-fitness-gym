@@ -1,0 +1,18 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Welcome to ACEest Fitness & Gym!"
+
+@app.route("/members")
+def members():
+    return {"members": ["John", "Sara", "Mike"]}
+
+@app.route("/plans")
+def plans():
+    return {"plans": ["Basic", "Premium", "Elite"]}
+
+if __name__ == "__main__":
+    app.run(debug=True)
