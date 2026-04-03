@@ -1,4 +1,4 @@
-# ACEest Fitness & Gym
+# Aceest Fitness & Gym
 
 ## Project Overview
 This project is a Flask-based web application developed for ACEest Fitness & Gym as part of a DevOps assignment. It demonstrates modern DevOps practices including version control with Git and GitHub, automated testing using Pytest, containerization with Docker, and CI/CD pipeline automation using GitHub Actions and Jenkins.
@@ -29,3 +29,17 @@ The objective of this project is to implement an end-to-end DevOps workflow for 
 ```bash
 git clone https://github.com/gnnileshs/aceest-fitness-gym.git
 cd aceest-fitness-gym
+
+## Jenkins Build Integration
+
+Jenkins is used as a secondary build validation layer in this project.
+
+### Build Steps
+- Pull latest code from GitHub
+- Install dependencies using `pip install -r requirements.txt`
+- Perform syntax validation
+- Execute Pytest test cases
+- Build Docker image
+
+Note:
+Due to environment restrictions on the local machine, Jenkins execution was conceptually designed and documented. The CI/CD validation was successfully demonstrated using GitHub Actions pipeline.
